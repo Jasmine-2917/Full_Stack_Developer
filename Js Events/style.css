@@ -1,0 +1,36 @@
+.btn{
+    padding: 12px 32px;
+    border-radius:12px;
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+}
+.magic{
+    animation-name: magic;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes magic{
+    20%{
+        color: blueviolet;
+        font-size: 40px;
+    }
+    40%{
+        color: rgb(0, 255, 68);
+        font-size: 50px;
+    }
+    60%{
+        color: rgb(46, 175, 255);
+        font-size: 60px;
+    }
+    80%{
+        color: rgb(249, 132, 29);
+        font-size: 50px;
+    }
+    100%{
+        color: rgb(211, 245, 18);
+        font-size: 40px;
+    }
+}
