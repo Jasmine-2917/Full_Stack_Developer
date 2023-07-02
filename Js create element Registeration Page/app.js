@@ -1,14 +1,35 @@
 let Users=[]
 
+function renderUsers(){
+   let UserContainer = document.getElementById('students');
+   UserContainer.innerHTML=" ";
+   Users.map((user)=>{
+      let div = document.createElement('div');
+      let name = document.createElement('p');
+      let rollNo = document.createElement('p');
+      div.classList.add('student-name');
+
+      name.innerText = user.name;
+      rollNo.innerText = user.rollNo;
+
+      UserContainer.appendChild(div);
+      div.appendChild(name);
+      div.appendChild(rollNo);
+
+
+   })
+
+}
+
 function register() {
 let nameInput= document.getElementById("name");
 let numberInput= document.getElementById("roll");
  let details ={
-    userName:nameInput.value,
-    number:numberInput.value,
+    name:nameInput.value,
+    rollNo:numberInput.value,
  }
  let rollCount=Users.filter((user)=>{
-    return user.number==details.number;
+    return user.rollNo==details.rollNo;
  });    
  if(rollCount.length==0){
     Users.push(details);
@@ -16,6 +37,7 @@ let numberInput= document.getElementById("roll");
 else{
     alert("User already exists with same Roll no.");
 };
+renderUsers();
 console.log(Users);
 
 };
