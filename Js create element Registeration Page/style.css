@@ -14,7 +14,7 @@ h1{
     
 }
 .container{
-    width: 500px;
+    width: 700px;
     height:600px;
    color: rgb(29, 26, 198);
     margin: 50px auto;
@@ -37,7 +37,7 @@ box-sizing: border-box;
 }
 .students{
     background: white;
-    width: 400px;
+    width: 500px;
 }
 
 button{
@@ -49,4 +49,12 @@ button{
      background-color: black;
      color: white;
      text-align: center;
+}
+.student-name{
+    padding: 0 20px;
+    display: flex;
+    gap: 24px;
+    background-color: rgb(255, 255, 139);
+    color: rgb(27, 205, 50);
+    margin-top: 12px;
 }
