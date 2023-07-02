@@ -7,6 +7,15 @@ let numberInput= document.getElementById("roll");
     userName:nameInput.value,
     number:numberInput.value,
  }
-Users.push(details);
-console.log(Users);
+ let rollCount=Users.filter((user)=>{
+    return user.number==details.number;
+ });    
+ if(rollCount.length==0){
+    Users.push(details);
 }
+else{
+    alert("User already exists with same Roll no.");
+};
+console.log(Users);
+
+};
