@@ -1,5 +1,7 @@
 let Users=[]
 
+
+
 function renderUsers(){
    let UserContainer = document.getElementById('students');
    UserContainer.innerHTML=" ";
@@ -21,6 +23,16 @@ function renderUsers(){
 
 }
 
+function successAlert(){
+   let alert=document.getElementById('alert');
+   alert.classList.add('alert');
+   alert.innerText="User Registered Successfully!";
+   setTimeout(()=>{
+   alert.style.removeProperty('alert');
+   alert.innerText=" ";
+   },1500)
+}
+
 function register() {
 let nameInput= document.getElementById("name");
 let numberInput= document.getElementById("roll");
@@ -33,11 +45,14 @@ let numberInput= document.getElementById("roll");
  });    
  if(rollCount.length==0){
     Users.push(details);
+    successAlert();
 }
 else{
     alert("User already exists with same Roll no.");
 };
 renderUsers();
 console.log(Users);
+
+
 
 };
